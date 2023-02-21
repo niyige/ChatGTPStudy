@@ -2,6 +2,7 @@ package com.oyy.chatgtpstudy.ui.fragment
 
 import android.content.Context
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -15,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_img.*
 
 @AndroidEntryPoint
-class ImgFragment: BaseFragment() {
+class ImgFragment : BaseFragment() {
 
     private val TAG = "ImgFragment"
 
@@ -41,8 +42,10 @@ class ImgFragment: BaseFragment() {
         super.createObserver()
         vm.imgAnswer.observe(viewLifecycleOwner) {
             imgProgressPb.visibility = View.GONE
-            if(it.isNotEmpty()) {
+            if (it.isNotEmpty() && TextUtils.isEmpty(it[0].message)) {
                 showContent(it[0].url)
+            } else {
+                vm.toast(it[0].message)
             }
 
         }
@@ -64,7 +67,8 @@ class ImgFragment: BaseFragment() {
     }
 
     private fun hideKeyboard(view: View) {
-        val imm: InputMethodManager = view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        val imm: InputMethodManager =
+            view.context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.hideSoftInputFromWindow(
             view.windowToken,
             InputMethodManager.HIDE_NOT_ALWAYS

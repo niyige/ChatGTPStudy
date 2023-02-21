@@ -55,6 +55,7 @@ class MainVm @Inject constructor(private val mainRepo: MainRepo) : BaseVm() {
         }
         onError {
             var result = ArrayList<Image>();
+            result.add(Image("错误信息: ${it.message}"))
             _imgAnswer.postValue(result)
         }
     }

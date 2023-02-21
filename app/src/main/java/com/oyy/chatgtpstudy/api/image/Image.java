@@ -16,6 +16,8 @@ public class Image {
      */
     String url;
 
+    String message;
+
 
     /**
      * Base64 encoded image string.
@@ -37,5 +39,17 @@ public class Image {
 
     public void setB64Json(String b64Json) {
         this.b64Json = b64Json;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Image(String message) {
+        this.message = message;
     }
 }
