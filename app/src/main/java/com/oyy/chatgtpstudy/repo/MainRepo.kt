@@ -3,6 +3,7 @@ package com.oyy.chatgtpstudy.repo
 import android.util.Log
 import com.oyy.chatgtpstudy.api.completion.CompletionChoice
 import com.oyy.chatgtpstudy.api.completion.CompletionRequest
+import com.oyy.chatgtpstudy.api.completion.CompletionResult
 import com.oyy.chatgtpstudy.api.image.CreateImageRequest
 import com.oyy.chatgtpstudy.api.image.Image
 import com.oyy.chatgtpstudy.base.BaseRepo
@@ -25,9 +26,10 @@ class MainRepo @Inject constructor() : BaseRepo() {
             val completionRequest =
                 CompletionRequest("text-davinci-003", question, 1, false, "niyige")
             Log.d("oyy", "生成中")
-            val results = service.createCompletion(completionRequest).choices
+            val results: CompletionResult = service.createCompletion(completionRequest)
             Log.d("oyy", "生成结束, data=$results")
-            return@withContext results;
+            val choses: List<CompletionChoice> = results.choices
+            return@withContext choses;
         }
 
     /**

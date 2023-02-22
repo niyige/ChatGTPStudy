@@ -64,4 +64,23 @@ public class CompletionChoice {
     public CompletionChoice(String text) {
         this.text = text;
     }
+
+    public CompletionChoice(String text, Integer index, LogProbResult logprobs, String finish_reason) {
+        this.text = text;
+        this.index = index;
+        this.logprobs = logprobs;
+        this.finish_reason = finish_reason;
+    }
+
+    public CompletionChoice() {}
+
+    @Override
+    public String toString() {
+        return "CompletionChoice{" +
+                "text='" + text + '\'' +
+                ", index=" + index +
+                ", logprobs=" + logprobs +
+                ", finish_reason='" + finish_reason + '\'' +
+                '}';
+    }
 }

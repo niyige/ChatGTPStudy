@@ -90,4 +90,28 @@ public class CompletionResult {
     public void setUsage(Usage usage) {
         this.usage = usage;
     }
+
+    public CompletionResult(String id, String object, long created, String model, List<CompletionChoice> choices, Usage usage) {
+        this.id = id;
+        this.object = object;
+        this.created = created;
+        this.model = model;
+        this.choices = choices;
+        this.usage = usage;
+    }
+
+    public CompletionResult() {}
+
+
+    @Override
+    public String toString() {
+        return "CompletionResult{" +
+                "id='" + id + '\'' +
+                ", object='" + object + '\'' +
+                ", created=" + created +
+                ", model='" + model + '\'' +
+                ", choices=" + choices +
+                ", usage=" + usage +
+                '}';
+    }
 }

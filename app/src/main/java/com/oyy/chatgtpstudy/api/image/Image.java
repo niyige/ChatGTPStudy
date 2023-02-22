@@ -52,4 +52,21 @@ public class Image {
     public Image(String message) {
         this.message = message;
     }
+
+    public Image(String url, String message, String b64Json) {
+        this.url = url;
+        this.message = message;
+        this.b64Json = b64Json;
+    }
+    public Image() {
+    }
+
+    @Override
+    public String toString() {
+        return "Image{" +
+                "url='" + url + '\'' +
+                ", message='" + message + '\'' +
+                ", b64Json='" + b64Json + '\'' +
+                '}';
+    }
 }
