@@ -5,11 +5,14 @@
       <map>
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/drawable/ami_activ_progross.xml" value="0.1945" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/drawable/ic_icon_active_loading.xml" value="0.1945" />
+        <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1955" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/drawable/radius_12_background_gray.xml" value="0.1945" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/layout/activity_main.xml" value="0.34739583333333335" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/layout/activity_main_page.xml" value="0.35688405797101447" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/layout/fragment_img.xml" value="0.35688405797101447" />
         <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/layout/fragment_text.xml" value="0.35688405797101447" />
+        <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1955" />
+        <entry key="..\:/workSpace/ChatGTPStudy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1955" />
       </map>
     </option>
   </component>

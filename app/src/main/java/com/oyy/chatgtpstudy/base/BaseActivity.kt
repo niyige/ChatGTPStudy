@@ -2,6 +2,7 @@ package com.oyy.chatgtpstudy.base
 
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.View
 import android.view.Window
 import android.widget.Toast
@@ -38,7 +39,8 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private fun defaultObserver() {
         vm.toastLV.observe(this) {
-            Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+            if (!TextUtils.isEmpty(it))
+                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
         }
     }
 

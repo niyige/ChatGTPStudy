@@ -27,7 +27,7 @@ public class CompletionRequest {
         this.echo = echo;
         this.user = user;
 
-        this.maxTokens = 500;
+        this.maxTokens = 4000;
         this.presencePenalty = 0.6;
         this.temperature = 0.9;
         this.topP = 1.0;
